@@ -72,16 +72,16 @@ li{margin-bottom:6px}
 .top{display:grid;grid-template-columns:1fr 1fr;column-gap:36px;align-items:center}
 .top img{display:block;width:100%;height:auto;grid-column:1;grid-row:1}
 .top h1{grid-column:2;grid-row:1;font-size:clamp(29px,3.45vw,46px);line-height:1.1;white-space:nowrap;letter-spacing:0;margin:0}
-.meta{grid-column:1;grid-row:2;margin-top:18px;font-family:var(--head);font-size:15px;line-height:1.4;text-align:left}
+.meta{grid-column:1/-1;white-space:nowrap;grid-row:2;margin-top:18px;font-family:var(--head);font-size:15px;line-height:1.4;text-align:left}
 .blurb{margin-top:34px;max-width:470px}
 .skills{margin-top:34px;display:flex;flex-direction:column;gap:12px}
 .skills p{margin:0}
 .cred{display:flex;align-items:center;gap:12px}
 .cred img{height:30px;width:30px;object-fit:contain;flex:none}
 .lang{padding-left:42px}   /* logo 30px + gap 12px: first letters line up with "Secret" */
-.contact{padding:48px 0;display:flex;flex-direction:column;gap:8px;font-size:12.5px}
-.contact .lbl{margin-bottom:6px}
-.contact a{align-self:flex-start;border-bottom:1px solid var(--line)}
+.contact{padding:0 0 48px 28px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;font-size:12.5px}
+.contact .lbl{margin-bottom:6px;line-height:1;margin-top:-1px}
+.contact a{align-self:center;border-bottom:1px solid var(--line)}
 .contact a:hover{border-color:var(--ink)}
 
 /* education */
@@ -121,6 +121,8 @@ h3.ptitle{font-size:30px;line-height:1.2;margin-bottom:12px}
 .sig img{display:block;height:calc(15px * 3.5);width:auto;margin:0 0 8px -4px}
 .signame{display:block;font-size:calc(15px * .75);line-height:1.4}
 
+#s-cv h1,#s-cv h3,#s-cv .when{font-family:var(--serif)}
+
 /* noir gallery */
 #s-gallery,#s-gallery *{font-family:var(--serif)}
 body.inv main{padding-top:0}
@@ -135,6 +137,7 @@ body.inv main{padding-top:0}
 .gh1{font-size:26px;margin:36px 0 14px}
 .gdesc{font-style:italic;font-weight:400;font-size:calc(11px * 1.65 * .6);line-height:1.6;color:#fff;max-width:780px;margin:0 0 18px}
 .gdesc b{font-weight:500}
+.gdesc.gnote{font-style:normal;margin:6px 0 18px}
 .ginfo{font-size:11px;line-height:1.9;margin:0 0 52px}
 .ginfo a{border-bottom:1px solid var(--line)}
 .ginfo a:hover{border-color:var(--ink)}
@@ -148,14 +151,14 @@ h2.gh2{font-size:14px;margin:0 0 28px}
 .gcell.fx{transition:opacity 1.7s ease}
 
 /* depop page */
-.dhero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;margin:-72px -64px 0}
-.dtxt{padding:72px 96px}
+.dhero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;margin:-72px -64px 0}
+.dtxt{padding:72px 40px 0 72px}
 .dtitle{font-family:var(--head);font-size:clamp(34px,4.3vw,64px);line-height:1.05;font-weight:400;margin:0 0 .45em}
 .dtxt p{font-size:14px;line-height:1.75;margin:0 0 14px}
 .dfig{margin:0}
 .dfig img{display:block;width:100%;height:auto}
 .dfig figcaption{font-family:var(--head);font-size:11px;padding:10px 16px}
-.dmid{margin:0 -64px;padding:48px 96px 0}
+.dmid{margin:0 -64px;padding:24px 72px 0}
 .dmid p{font-size:14px;line-height:1.8;margin:0 0 16px}
 .dmid .dtitle{margin:72px 0 0}
 .dgal{margin:0 -36px;padding:64px 0 40px}
@@ -227,7 +230,7 @@ h2.gh2{font-size:14px;margin:0 0 28px}
         <h1>Ahnes Kim</h1>
         <div class="meta">
           Undergraduate Student<br>
-          University of Michigan Ann Arbor<br>
+          University of Michigan Ann&nbsp;Arbor<br>
           BA Economics, Class of 2027
         </div>
       </div>
@@ -353,6 +356,7 @@ h2.gh2{font-size:14px;margin:0 0 28px}
     <a class="back" href="#about" aria-label="Back to About Me"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 8H2M7 3L2 8l5 5"/></svg></a></div>
   <h1 class="gh1">NoiR Runway</h1>
   <p class="gdesc"><b>NoiR Runway</b> is a student-run fashion and philanthropy organization dedicated to combining creative expression with community impact. The organization produces large-scale runway shows, fundraising campaigns, and fashion-centered events that raise awareness and support charitable initiatives while fostering collaboration among students interested in fashion, marketing, design, and business.</p>
+  <p class="gdesc gnote">Please click on each image to learn more!</p>
   <p class="ginfo"><a href="https://www.noirrunway.com/" target="_blank" rel="noopener">www.noirrunway.com</a><br><a href="https://www.instagram.com/noirrunway/" target="_blank" rel="noopener">Check out Noir on Instagram for the latest updates.</a></p>
   <h2 class="gh2">NoiR Runway - Marketing Director 2026/27</h2>
   <div class="ggrid" id="gridA"></div>
@@ -364,7 +368,7 @@ h2.gh2{font-size:14px;margin:0 0 28px}
 <section id="s-depop">
   <div class="dhero">
     <div class="dtxt">
-      <h1 class="dtitle">Depop x NoiR Student Org Collaboration</h1>
+      <h1 class="dtitle">Depop x NoiR Student&nbsp;Org Collaboration</h1>
       <p>As Marketing &amp; Media Director at Noir, I oversee creative direction for photoshoot campaigns, runway show promotions, and overall brand image management. I stepped into this role as a college junior and continue to lead marketing initiatives throughout the 2026-2027 academic year. One of my most recent projects was a collaboration between Depop, UofM Circular Fashion, and Noir.</p>
       <p>My experience at Noir has allowed me to develop a wide range of creative, marketing, and leadership skills. Driven by a passion for creative storytelling and strong visual branding, I strive to produce work that meets my own high standards while serving as a meaningful representation of the organizations I represent.</p>
     </div>
@@ -373,6 +377,7 @@ h2.gh2{font-size:14px;margin:0 0 28px}
   <div class="dmid">
     <p>The creative process of this project began with the conceptualization and direction of a photoshoot campaign featuring selected Noir models in a location that reflected the campaign’s visual identity. Aligning my personal interpretation of Depop’s current aesthetic with the message we aimed to communicate, I then edited the shots I took using Canva and Adobe Photoshop to further enhance visual appeal. Wanting to create a student-focused and approachable campaign for the UofM Circular Fashion event, I carefully considered model selection, location, styling, and concept development to ensure the final imagery felt cohesive, engaging, and representative of a diverse audience.</p>
     <p>I strongly believe that successful brands maintain a clear visual identity that audiences can instantly recognize and connect with. With this collaboration, my goal was to reinforce one of Noir’s goals as a modeling organization to offer students editorial and creative opportunities while creating mutual value for all collaborators through a campaign that captured the familiarity of everyday fashion brands. By balancing accessibility with a refined and cohesive aesthetic, the final campaign reached an audience of about 7,000 students across five countries.</p>
+    <p>Please click on each image to learn more!</p>
     <h2 class="dtitle">Depop x NoiR Gallery</h2>
   </div>
   <div class="dgal"><div class="ggrid g3" id="gridD"></div></div>
@@ -390,20 +395,37 @@ var GAL={"a": [{"s": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAU
   var FX='h1,h2,h3,p,li,figure,figcaption,.when,.lbl,.contact>*,.proj>.lnk,.top img,.meta,.cred,.edu img,.org>img,.gcell,.gbar';
   var io=null,openBox=null,body=document.body,dd=document.getElementById('dd');
   var nm=document.querySelector('nav .name');
-  function fitName(){   /* two lines of caps, about 1 inch tall (96px), cap tops flush with the top of the page */
-    if(innerWidth<=760){nm.style.fontSize=nm.style.lineHeight=nm.style.marginTop='';nm.parentNode.style.paddingTop='';return}
+  function fitName(){   /* two lines of caps; ink runs from the left edge of the page to the left edge of the navy band (250px) */
+    var nav=nm.parentNode;
+    if(innerWidth<=760){nm.style.fontSize=nm.style.lineHeight=nm.style.marginTop=nm.style.left='';nav.style.paddingTop='';return}
     var ctx=document.createElement('canvas').getContext('2d'),F=100,LS=.09;
     ctx.font=F+'px Allerta, "Helvetica Neue", Arial, sans-serif';
-    var m=ctx.measureText('AHNES KIM'),cap=m.actualBoundingBoxAscent/F;
-    var fa=(m.fontBoundingBoxAscent||F*.9)/F,fd=(m.fontBoundingBoxDescent||F*.25)/F,LH=.82;
-    var H=114,f=H/(LH+cap),w=(ctx.measureText('AHNES').width/F-4*LS)*f;
-    if(w>232)f*=232/w;                              /* never wider than the menu column */
+    var m=ctx.measureText('AHNES'),mk=ctx.measureText('AHNES KIM'),cap=mk.actualBoundingBoxAscent/F;
+    var fa=(mk.fontBoundingBoxAscent||F*.9)/F,fd=(mk.fontBoundingBoxDescent||F*.25)/F,LH=.82;
+    var ink=(m.actualBoundingBoxRight+m.actualBoundingBoxLeft)/F-4*LS;
+    var side=nav.getBoundingClientRect().width||250;
+    var f=(side-2)/ink;
     var L=LH*f,off=(L-(fa+fd)*f)/2+(fa-cap)*f;
     nm.style.fontSize=f+'px';nm.style.lineHeight=L+'px';nm.style.marginTop=(-off)+'px';
-    nm.parentNode.style.paddingTop=(H+100)+'px';
+    nm.style.left=(m.actualBoundingBoxLeft/F*f)+'px';
+    nav.style.paddingTop=((LH+cap)*f+100)+'px';
   }
+  function fitDepop(){   /* last line of the 2nd paragraph meets the bottom of the cover photo */
+    var sec=document.getElementById('s-depop');if(!sec||!sec.classList.contains('show'))return;
+    var t=sec.querySelector('.dtxt'),ps=t.querySelectorAll('p'),im=sec.querySelector('.dfig img');
+    ps.forEach(function(p){p.style.fontSize='';});t.style.paddingTop='';
+    if(innerWidth<=760)return;
+    var lo=11,hi=19,pad=Math.min(72,parseFloat(getComputedStyle(t).paddingTop)||72),last=ps[ps.length-1];
+    t.style.paddingTop=pad+'px';
+    for(var i=0;i<14;i++){var mid=(lo+hi)/2;ps.forEach(function(p){p.style.fontSize=mid+'px'});
+      if(last.getBoundingClientRect().bottom>im.getBoundingClientRect().bottom)hi=mid;else lo=mid}
+    ps.forEach(function(p){p.style.fontSize=lo+'px'});
+    var d=im.getBoundingClientRect().bottom-last.getBoundingClientRect().bottom;
+    t.style.paddingTop=Math.max(0,pad+d)+'px';
+  }
+  addEventListener('resize',fitDepop);
   fitName();addEventListener('resize',fitName);
-  if(document.fonts&&document.fonts.load){document.fonts.load('100px Allerta').then(fitName)}
+  if(document.fonts&&document.fonts.load){document.fonts.load('100px Allerta').then(fitName);document.fonts.ready.then(function(){fitName();fitDepop()})}
   var pop=document.createElement('div');pop.className='pop';
   pop.innerHTML='<div class="pt"></div><div class="pd"></div><div class="pb"></div>';body.appendChild(pop);
 
@@ -490,7 +512,7 @@ var GAL={"a": [{"s": "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAU
       a.classList.toggle('on',on);
     });
     window.scrollTo(0,0);
-    arm(sec);
+    arm(sec);fitDepop();
     if(map[t]){var el=document.getElementById(t);if(el)el.scrollIntoView();}
   }
   window.addEventListener('hashchange',route);
